@@ -1,0 +1,1 @@
+{"private":true,"dependencies":{"types-registry":"^0.1.710"},"devDependencies":{"@types/babel-core":"^6.25.10","@types/chai":"^5.0.1","@types/chai-dom":"^1.11.3","@types/cssom":"^0.4.3","@types/define-properties":"^1.1.5","@types/has":"^1.0.2","@types/jsdom":"^21.1.7","@types/mocha":"^10.0.10","@types/object-inspect":"^1.13.0"}}

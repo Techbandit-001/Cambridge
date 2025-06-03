@@ -1,0 +1,63 @@
+[34m2025-05-19 16:42:57[39m Executing: CREATE TABLE blogs(      id INTEGER [PRIMARY KEY],   title TEXT,   image IMAGE,   description TEXT,   author_id INTEGER  )
+[34m2025-05-19 16:42:57[39m [32mResult: Completed in 86ms[39m
+[34m2025-05-19 16:46:41[39m Executing: CREATE TABLE user(      id INTEGER [PRIMARY KEY],   name TEXT,   email TEXT,   address TEXT )
+[34m2025-05-19 16:46:41[39m [32mResult: Completed in 67ms[39m
+[34m2025-05-19 16:49:14[39m Executing: CREATE TABLE author(      id INTEGER [PRIMARY KEY],   name TEXT,   blog_id TEXT, )
+[34m2025-05-19 16:49:14[39m [31mExecute fail : Parse error: near ")": syntax error[39m
+[31m  TEGER [PRIMARY KEY],   name TEXT,   blog_id TEXT, ) ;[39m
+[31m                                      error here ---^[39m
+[34m2025-05-19 16:49:22[39m Executing: CREATE TABLE author(      id INTEGER [PRIMARY KEY],   name TEXT,   blog_id TEXT )
+[34m2025-05-19 16:49:22[39m [32mResult: Completed in 96ms[39m
+[34m2025-05-19 16:50:58[39m Executing: CREATE TABLE comments(      id INTEGER [PRIMARY KEY],   user_id INTEGER,   blog_id INTEGER )
+[34m2025-05-19 16:50:58[39m [32mResult: Completed in 309ms[39m
+[34m2025-05-19 16:58:46[39m Executing: CREATE TABLE author(      id INTEGER [PRIMARY KEY],   name TEXT,   blog_id TEXT )
+[34m2025-05-19 16:58:46[39m [31mExecute fail : Parse error: table author already exists[39m
+[31m  CREATE TABLE author(      id INTEGER [PRIMARY KEY],   name TEXT,   blog_id TEX[39m
+[31m               ^--- error here[39m
+[34m2025-05-19 16:59:17[39m Executing: CREATE TABLE comments(      id INTEGER [PRIMARY KEY],   user_id INTEGER,   blog_id INTEGER )
+[34m2025-05-19 16:59:17[39m [31mExecute fail : Parse error: table comments already exists[39m
+[31m  CREATE TABLE comments(      id INTEGER [PRIMARY KEY],   user_id INTEGER,   blo[39m
+[31m               ^--- error here[39m
+[34m2025-05-19 16:59:20[39m Executing: CREATE TABLE author(      id INTEGER [PRIMARY KEY],   name TEXT,   blog_id TEXT )
+[34m2025-05-19 16:59:20[39m [31mExecute fail : Parse error: table author already exists[39m
+[31m  CREATE TABLE author(      id INTEGER [PRIMARY KEY],   name TEXT,   blog_id TEX[39m
+[31m               ^--- error here[39m
+[34m2025-05-19 16:59:22[39m Executing: CREATE TABLE user(      id INTEGER [PRIMARY KEY],   name TEXT,   email TEXT,   address TEXT )
+[34m2025-05-19 16:59:22[39m [31mExecute fail : Parse error: table user already exists[39m
+[31m  CREATE TABLE user(      id INTEGER [PRIMARY KEY],   name TEXT,   email TEXT,  [39m
+[31m               ^--- error here[39m
+[34m2025-05-19 16:59:28[39m Executing: CREATE TABLE blogs(      id INTEGER [PRIMARY KEY],   title TEXT,   image IMAGE,   description TEXT,   author_id INTEGER  )
+[34m2025-05-19 16:59:28[39m [31mExecute fail : Parse error: table blogs already exists[39m
+[31m  CREATE TABLE blogs(      id INTEGER [PRIMARY KEY],   title TEXT,   image IMAGE[39m
+[31m               ^--- error here[39m
+[34m2025-05-20 11:17:52[39m Executing: CREATE TABLE comments(      id INTEGER [PRIMARY KEY],   user_id INTEGER,   blog_id INTEGER,   FOREIGN KEY (user_id) REFERENCES user(id),   FOREIGN KEY (blog_id) REFERENCES blogs(id) )
+[34m2025-05-20 11:17:52[39m [31mExecute fail : Parse error: table comments already exists[39m
+[31m  CREATE TABLE comments(      id INTEGER [PRIMARY KEY],   user_id INTEGER,   blo[39m
+[31m               ^--- error here[39m
+[34m2025-05-20 11:18:04[39m Executing: CREATE TABLE author(      id INTEGER [PRIMARY KEY],   name TEXT,   blog_id TEXT )
+[34m2025-05-20 11:18:04[39m [31mExecute fail : Parse error: table author already exists[39m
+[31m  CREATE TABLE author(      id INTEGER [PRIMARY KEY],   name TEXT,   blog_id TEX[39m
+[31m               ^--- error here[39m
+[34m2025-05-20 11:18:09[39m Executing: /* 2025-05-19 16:49:22 [96 ms] */
+[34m2025-05-20 11:18:09[39m [32mResult: Completed in 53ms[39m
+[34m2025-05-28 21:20:00[39m Executing: INSERT INTO "posts"("title","category","image_url","content") VALUES('Generative AI','tech','https://www.simplilearn.com/ice9/free_resources_article_thumb/Technology_Trends.jpg','The well-structured program provided engaging and relevant content, laying a strong foundation for my AWS ML Engineer Associate certification. The insights gained have strengthened my AI ML expertise, helping me drive digital transformation, improve operational efficiency and future-proof businesses for long-term success')
+[34m2025-05-28 21:20:00[39m [31mExecute fail : Error: unable to open database "blog-backend/migrations/versions/41192a29351b_init.py": unable to open database file[39m
+[31mNotice: using substitute in-memory database instead of "blog-backend/migrations/versions/41192a29351b_init.py"[39m
+[31mParse error: no such table: posts[39m
+[34m2025-05-28 21:20:03[39m Executing: INSERT INTO "posts"("title","category","image_url","content") VALUES('Generative AI','tech','https://www.simplilearn.com/ice9/free_resources_article_thumb/Technology_Trends.jpg','The well-structured program provided engaging and relevant content, laying a strong foundation for my AWS ML Engineer Associate certification. The insights gained have strengthened my AI ML expertise, helping me drive digital transformation, improve operational efficiency and future-proof businesses for long-term success')
+[34m2025-05-28 21:20:03[39m [31mExecute fail : Error: unable to open database "blog-backend/migrations/versions/41192a29351b_init.py": unable to open database file[39m
+[31mNotice: using substitute in-memory database instead of "blog-backend/migrations/versions/41192a29351b_init.py"[39m
+[31mParse error: no such table: posts[39m
+[34m2025-05-28 21:25:40[39m Executing: INSERT INTO "posts"("title","category","image_url","content") VALUES('Generative AI','tech','https://www.simplilearn.com/ice9/free_resources_article_thumb/Technology_Trends.jpg','The well-structured program provided engaging and relevant content, laying a strong foundation for my AWS ML Engineer Associate certification. The insights gained have strengthened my AI ML expertise, helping me drive digital transformation, improve operational efficiency and future-proof businesses for long-term success')
+[34m2025-05-28 21:25:40[39m [31mExecute fail : Error: unable to open database "blog-backend/migrations/versions/41192a29351b_init.py": unable to open database file[39m
+[31mNotice: using substitute in-memory database instead of "blog-backend/migrations/versions/41192a29351b_init.py"[39m
+[31mParse error: no such table: posts[39m
+[34m2025-05-28 21:25:41[39m Executing: INSERT INTO "posts"("title","category","image_url","content") VALUES('Generative AI','tech','https://www.simplilearn.com/ice9/free_resources_article_thumb/Technology_Trends.jpg','The well-structured program provided engaging and relevant content, laying a strong foundation for my AWS ML Engineer Associate certification. The insights gained have strengthened my AI ML expertise, helping me drive digital transformation, improve operational efficiency and future-proof businesses for long-term success')
+[34m2025-05-28 21:25:41[39m [31mExecute fail : Error: unable to open database "blog-backend/migrations/versions/41192a29351b_init.py": unable to open database file[39m
+[31mNotice: using substitute in-memory database instead of "blog-backend/migrations/versions/41192a29351b_init.py"[39m
+[31mParse error: no such table: posts[39m
+[34m2025-05-28 21:25:41[39m Executing: INSERT INTO "posts"("title","category","image_url","content") VALUES('Generative AI','tech','https://www.simplilearn.com/ice9/free_resources_article_thumb/Technology_Trends.jpg','The well-structured program provided engaging and relevant content, laying a strong foundation for my AWS ML Engineer Associate certification. The insights gained have strengthened my AI ML expertise, helping me drive digital transformation, improve operational efficiency and future-proof businesses for long-term success')
+[34m2025-05-28 21:25:41[39m [31mExecute fail : Error: unable to open database "blog-backend/migrations/versions/41192a29351b_init.py": unable to open database file[39m
+[31mNotice: using substitute in-memory database instead of "blog-backend/migrations/versions/41192a29351b_init.py"[39m
+[31mParse error: no such table: posts[39m
+

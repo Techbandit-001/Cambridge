@@ -1,0 +1,2 @@
+-- 2025-05-27 21:52:34 [60 ms] - SQLite
+INSERT INTO "posts"("title","category","image_url","content") VALUES('Generative AI','tech','https://www.simplilearn.com/ice9/free_resources_article_thumb/Technology_Trends.jpg','The well-structured program provided engaging and relevant content, laying a strong foundation for my AWS ML Engineer Associate certification. The insights gained have strengthened my AI ML expertise, helping me drive digital transformation, improve operational efficiency and future-proof businesses for long-term success');

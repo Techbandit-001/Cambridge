@@ -8,12 +8,29 @@ class Person:
     def introduce(self):
         return f"Hi, I'm {self.name}, a {self.age}-year-old {self.occupation}."
 
-    def celebrate_birthday(self):
-        self.age += 1
-        return f"Happy Birthday, {self.name}! You are now {self.age} years old."
+    def is_adult(self):
+        return self.age >= 18
+    
+    def sleep(self, hours):
+      return f"{self.name} slept for {hours} hours."
 
 person1 = Person("Lucy", 21, "female", "Nurse")
 
 print(person1.introduce())
-print(person1.celebrate_birthday())
-print(person1.introduce())  
+print(person1.is_adult())
+print(person1.sleep(2)) 
+
+def logger(funct):
+   # define another inner function
+   def inner():
+      print("Decorator is running before function")
+      # executes the original function
+      func()
+
+   return(inner)   
+   
+# @logger
+def check_mic():
+   print("Is the mic working?")
+
+check_mic()   
